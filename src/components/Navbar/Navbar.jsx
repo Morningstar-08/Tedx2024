@@ -1,36 +1,42 @@
 import tedxlogo from "../../assets/TedxLogo.png";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
-import { FaFacebook, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaYoutube, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import "./Navbar.css";
 
 export default function Navbar() {
   return (
-    <div className="nav">
+    <div className="nav abril-fatface-regular">
       <img className="title--logo" src={tedxlogo} />
       <ul className="nav--pages">
         <CustomLink to="/Home">HOME</CustomLink>
         <CustomLink to="/Speakers">SPEAKERS</CustomLink>
         <CustomLink to="/Sponsors">SPONSORS</CustomLink>
         <CustomLink to="/Rewind">REWIND</CustomLink>
-        <CustomLink to="/Merch">MERCH</CustomLink>
+        <CustomLink to="/Tickets">TICKETS</CustomLink>
         <CustomLink to="/About-us">ABOUT</CustomLink>
       </ul>
       <div className="nav--social">
         <ul className="nav--social-icons">
           <li>
-            <a href="">
+            <a
+              href="https://www.instagram.com/tedxniituniversity/"
+              target="_blank"
+            >
               <FaInstagram className="instagram" />
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="https://www.youtube.com/@TED" target="_blank">
               <FaYoutube className="youtube" />
             </a>
           </li>
           <li>
-            <a href="">
-              <FaFacebook className="facebook" />
+            <a
+              href="https://www.linkedin.com/school/tedxniituniversity/mycompany/"
+              target="_blank"
+            >
+              <FaLinkedin className="linkedin" />
             </a>
           </li>
           <li>

@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: url("./pattern5_1.png");
+  background-size: cover;
+}
+.abril-fatface-regular {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tickets {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticket-wrap {
+  padding: 20px;
+  background: rgb(255, 255, 255, 0.5);
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.img-wrap {
+  width: 51%;
+}
+
+.vip-ticket {
+  max-width: 41%;
+  margin-right: 20px;
+}
+.general-ticket {
+  max-width: 41%;
+  margin-right: 20px;
+}
+
+.form {
+  width: 100%;
+  padding: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.input-box {
+  border: none;
+}
+
+@media screen and (max-width: 750px) {
+  .img-wrap {
+    width: 100%;
+  }
+  .vip-ticket {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .general-ticket {
+    max-width: 100%;
+  }
+  .ticket-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* .ticket-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-wrap {
+  padding-left: 10%;
+}
+
+.vip-ticket {
+  max-width: 21%;
+  margin-right: 40px;
+  margin-left: 10%;
+}
+.general-ticket {
+  max-width: 21%;
+}
+
+.form {
+  top: 50%;
+  left: 80%;
+  width: 500px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.form h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.input-box {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.form .input-box::placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+} */
