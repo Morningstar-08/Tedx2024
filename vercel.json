@@ -1,3 +1,6 @@
 {
-  "rewrites": [{ "source": "/", "destination": "./components/Home/Home" }]
+  "rewrites": [
+    { "source": "/", "destination": "/components/Home/Home" },
+    { "source": "/Rewind", "destination": "/components/Home/Home" }
+  ]
 }
