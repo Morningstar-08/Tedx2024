@@ -6,12 +6,21 @@ export default function Tickets() {
     e.preventDefault();
     const formData = new FormData(formElement);
     fetch(
-      "https://script.google.com/macros/s/AKfycbxI8k5o22dFPDHQ8r6yNGm30dgSUCSKYBzlQ_W4VcgGtESNL6A0M8u5EdOjToxJa6WO9w/exec",
+      "https://script.google.com/macros/s/AKfycbzMSO6RZKJ-bQew9nrYHQ87eFfI5v8BS88viVwgbKQqHfxmGg2IXvIxf1IwnJ137ZTxPQ/exec",
       {
         method: "POST",
         body: formData,
       }
-    );
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        alert("Thank you for registering for the event!");
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("Error! Please contact the core.");
+      });
   }
 
   return (
@@ -31,21 +40,26 @@ export default function Tickets() {
             Submit(e);
           }}
           id="form"
+          className="form"
         >
-          <div className="form">
-            <h2 className=".abril-fatface-regular.abril-fatface-regular">
-              REGISTRATION FORM
-            </h2>
+          <div>
+            <h2 className=".abril-fatface-regular">REGISTRATION FORM</h2>
             <div className="input-box">
-              <label htmlFor="name">Full Name</label>
+              <label htmlFor="name" className="labelline">
+                Full Name
+              </label>
               <input type="text" id="name" name="Name" required />
             </div>
             <div className="input-box">
-              <label htmlFor="email">Email ID</label>
+              <label htmlFor="email" className="labelline">
+                Email ID
+              </label>
               <input type="email" name="Email" id="email" required />
             </div>
             <div className="input-box">
-              <label htmlFor="contact">Contact No.</label>
+              <label htmlFor="contact" className="labelline">
+                Contact No.
+              </label>
               <input
                 className="input-box"
                 type="text"
@@ -54,31 +68,24 @@ export default function Tickets() {
                 required
               />
             </div>
-            <div className="input-checkbox">
-              <label className="input-checkbox" htmlFor="general">
-                General Ticket
-              </label>
-              <input
-                type="checkbox"
-                name="Ticket"
-                id="general"
-                value="General Ticket"
-              />
+            <div className="input-select">
+              <select name="Ticket" id="">
+                <option value="Select Ticket Type" selected disabled>
+                  Select Ticket Type
+                </option>
+                <option value="General Ticket" name="Ticket" id="general">
+                  General Ticket
+                </option>
+                <option value="VIP Ticket" name="Ticket" id="vip">
+                  VIP Ticket
+                </option>
+              </select>
             </div>
-            <div className="input-checkbox">
-              <label htmlFor="vip">VIP Ticket</label>
-              <input
-                className="input-checkbox"
-                type="checkbox"
-                name="Ticket"
-                id="vip"
-                value="VIP Ticket"
-              />
+            <div className="button-div">
+              <button type="submit" className="button-24">
+                <span>REGISTER NOW!</span>
+              </button>
             </div>
-            {/* <input className="btn-6" type="submit" value="REGISTER NOW!" /> */}
-            <button type="submit" className="btn-3">
-              <span>REGISTER NOW!</span>
-            </button>
           </div>
         </form>
       </div>

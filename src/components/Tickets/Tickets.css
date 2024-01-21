@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 body {
   width: 100%;
@@ -6,6 +7,9 @@ body {
   margin: 0;
   background: url("./pattern5_1.png");
   background-size: cover;
+  font-family: "Poppins";
+  font-weight: 300;
+  font-style: light;
 }
 .abril-fatface-regular {
   font-family: "Abril Fatface", serif;
@@ -17,7 +21,6 @@ body {
   min-height: 90vh;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .ticket-wrap {
@@ -33,6 +36,7 @@ body {
 }
 
 .img-wrap {
+  margin-left: 10%;
   width: 51%;
 }
 
@@ -46,7 +50,7 @@ body {
 }
 
 .form {
-  width: 100%;
+  width: 50%;
   padding: 10%;
   display: flex;
   align-items: center;
@@ -54,13 +58,108 @@ body {
   flex-direction: column;
 }
 
-.input-box {
-  border: none;
+.input-box input {
+  outline: none;
+  position: relative;
+  width: 100%;
+  position: relative;
+  font-size: 1.1em;
+  line-height: 30px;
+  padding: 0.3px;
+  border-radius: 5px;
+  background: rgb(255, 255, 255, 0.5);
+  border: 2px solid #f0ffff;
+  transition: 0.1s ease;
+  z-index: 1111;
+}
+
+.labelline {
+  font-size: 1.2em;
+  padding-bottom: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+input:focus,
+input:valid {
+  color: #2f302f;
+  border: 2px solid #494b48;
+}
+
+.input-select {
+  height: 30px;
+  margin-top: 20px;
+  line-height: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+select {
+  height: 30px;
+  width: 100%;
+  font-size: 1em;
+  padding: 0.3px;
+  border-radius: 5px;
+  background: rgb(255, 255, 255, 0.5);
+  border: 2px solid #f0ffff;
+}
+
+.button-div {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CSS */
+.button-24 {
+  background: #eb0028;
+  border: 1px solid #eb0028;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: rgb(255, 255, 255, 0.5);
+  background-position: 0 0;
+  color: #eb0028;
+  transition: 0.25s ease-in-out;
+}
+
+.button-24:active {
+  opacity: 0.5;
 }
 
 @media screen and (max-width: 750px) {
+  .input-box input {
+    width: 100%;
+  }
+  .form {
+    width: 100%;
+  }
   .img-wrap {
     width: 100%;
+    margin: auto;
   }
   .vip-ticket {
     max-width: 100%;
