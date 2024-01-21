@@ -1,12 +1,12 @@
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import { Route, Routes } from "react-router-dom";
-import Home from "./components/Home/Home";
-import Sponsors from "./components/Sponsors/Sponsors";
-import Rewind from "./components/Rewind/Rewind";
-import Aboutus from "./components/Aboutus/Aboutus";
-import Speakers from "./components/Speakers/Speakers";
-import Tickets from "./components/Tickets/Tickets";
+import Home from "./components/Home/Home.jsx";
+// import Sponsors from "./components/Sponsors/Sponsors";
+// import Rewind from "./components/Rewind/Rewind";
+// import Aboutus from "./components/Aboutus/Aboutus";
+// import Speakers from "./components/Speakers/Speakers";
+import Tickets from "./components/Tickets/Tickets.jsx";
 
 function App() {
   return (
