@@ -1,7 +1,7 @@
 import { Text3D, OrbitControls, Center } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import "./Home.css";
-import React, { useRef } from "react";
+import React from "react";
 
 const Scene = () => {
   return (
@@ -33,6 +33,7 @@ export default function Home() {
     <>
       <div className="home--div">
         <img className="logo" src="./logo2.png" alt="" />
+
         <div className="canvas--div">
           <Canvas
             camera={{ fov: 70, position: [0, 0, 3] }}
