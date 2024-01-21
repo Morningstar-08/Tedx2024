@@ -1,6 +1,7 @@
 {
   "rewrites": [
     { "source": "/", "destination": "/components/Home/Home" },
-    { "source": "/Rewind", "destination": "/components/Home/Home" }
+    { "source": "/Rewind", "destination": "/components/Home/Home" },
+    { "source": "/Tickets", "destination": "/components/Tickets/Tickets" }
   ]
 }
