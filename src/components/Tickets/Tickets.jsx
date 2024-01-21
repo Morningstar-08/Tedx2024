@@ -43,7 +43,11 @@ export default function Tickets() {
           className="form"
         >
           <div>
-            <h2 className=".abril-fatface-regular">REGISTRATION FORM</h2>
+            <div className="heading">
+              <h2 className=".abril-fatface-regular reghead">
+                REGISTRATION FORM
+              </h2>
+            </div>
             <div className="input-box">
               <label htmlFor="name" className="labelline">
                 Full Name
