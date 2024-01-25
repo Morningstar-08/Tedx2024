@@ -27,12 +27,8 @@ export default function Tickets() {
     <div className="tickets">
       <div className="ticket-wrap">
         <div className="img-wrap">
-          <img className="vip-ticket" src="./Main_day_Ticket_VIP.png" alt="" />
-          <img
-            className="general-ticket"
-            src="./Main_day_Ticket_Attendee.png"
-            alt=""
-          />
+          <img className="vip-ticket" src="./VIP.png" alt="" />
+          <img className="general-ticket" src="./Attendee.png" alt="" />
         </div>
 
         <form
