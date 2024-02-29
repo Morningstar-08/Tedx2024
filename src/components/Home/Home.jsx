@@ -1,48 +1,87 @@
-import { Text3D, OrbitControls, Center } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
 import "./Home.css";
+import "./Slider.css";
 import React from "react";
 
-const Scene = () => {
+const Tile = (props) => {
   return (
-    <>
-      <OrbitControls enableZoom={false} />
-      <mesh castShadow position={[0, -1, 0]}>
-        <Center>
-          <Text3D
-            font="./Samarkan_Normal.json"
-            size={0.8}
-            height={0.2}
-            curveSegments={12}
-            bevelEnabled
-            bevelThickness={0.02}
-            bevelOffset={0}
-            bevelSegments={5}
-          >
-            SAPTARANGA
-            <meshNormalMaterial />
-          </Text3D>
-        </Center>
-      </mesh>
-    </>
+    <div className="tile">
+      <img src={props.img} alt="Tile 1" />
+      <div className="text">
+        <h1>{props.heading}</h1>
+        <h2 className="animate-text">{props.event}</h2>
+        <p className="animate-text">{props.description}</p>
+        <div className="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const TileGallery = () => {
+  return (
+    <div className="wrap">
+      <div className="tile-gallery">
+        <Tile
+          img="./imgs/theme.jpeg"
+          heading="Theme Reveal"
+          event="Kaleidoscope of Dreams"
+          description=""
+        />
+        <Tile
+          img="./imgs/adventure.JPG"
+          heading="Adventure Day"
+          event="Adventure Day"
+          description=""
+        />
+        <Tile
+          img="./imgs/panel.jpeg"
+          heading="Panel Reveal"
+          event="Kaleidoscope of Echoes"
+          description=""
+        />
+        <Tile
+          img="./imgs/panel2.jpeg"
+          heading="Panel Reveal"
+          event="Kaleidoscope of Echoes"
+          description=""
+        />
+        <Tile
+          img="./imgs/lights1.jpeg"
+          heading="Cultural event"
+          event="Kaleidoscope of Lights"
+          description=""
+        />
+        <Tile
+          img="./imgs/lights2.jpeg"
+          heading=" Cultural event"
+          event="Kaleidoscope of Lights"
+          description=""
+        />
+      </div>
+    </div>
   );
 };
 
 export default function Home() {
   return (
     <>
-      <div className="home--div">
-        <img className="logo" src="./logo2.png" alt="" />
-
-        <div className="canvas--div">
-          <Canvas
-            camera={{ fov: 70, position: [0, 0, 3] }}
-            shadows
-            dpr={[1, 2]}
-          >
-            <Scene />
-          </Canvas>
+      <div className="home-container">
+        <div className="home--div">
+          <img className="logo" src="./logo2.png" alt="" />
+          <div className="title-div">
+            <h1 className="title">SAPTRANGA</h1>
+          </div>
         </div>
+      </div>
+      <div className="gallery">
+        <TileGallery />
+      </div>
+      <div className="timeline">
+        <h1 className="timeline-title">TIMELINE</h1>
+        <img src="./Timelineweb.png" alt="" />
       </div>
     </>
   );

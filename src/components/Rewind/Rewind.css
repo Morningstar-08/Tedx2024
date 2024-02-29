@@ -1,0 +1,475 @@
+@import url("https://fonts.googleapis.com/css?family=UnifrakturCook:700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+
+.rewind {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background: #000000;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background: #999;
+}
+
+.newspaper {
+  background: #eae8e6;
+  width: 1280px;
+  margin: 40px 0;
+  border-radius: 2px;
+  padding: 65px 90px;
+  background: linear-gradient(
+    to bottom,
+    rgba(204, 205, 191, 1) 0%,
+    rgba(226, 222, 210, 1) 20%,
+    rgba(226, 222, 210, 1) 67%,
+    rgba(204, 205, 191, 1) 100%
+  );
+  box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.75);
+  position: relative;
+  min-height: 100vh;
+}
+
+.newspaper__bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.header_rewind {
+  position: relative;
+  z-index: 1;
+}
+
+.vertical-divider {
+  width: 1px;
+  background-color: #ddd;
+  margin: 0 20px;
+}
+
+.header__banner {
+  position: relative;
+  max-width: calc(100% - 375px);
+  margin: 0 auto;
+  display: block;
+  height: 35px;
+  text-align: center;
+  color: white;
+  background: #bf5750;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15) inset, 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.header__banner__title {
+  font-size: 33px;
+  letter-spacing: 1.5px;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-weight: 900;
+  color: #e6e6e6;
+}
+
+.header__banner::before,
+.header__banner::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  z-index: -1;
+  left: -190px;
+  top: 10px;
+  display: block;
+  width: 200px;
+  height: 0px;
+  color: #e6e6e6;
+  border: 17.5px solid #bf5750;
+  border-right: 10px solid #bf5750;
+  border-bottom-color: #bf5750;
+  border-left-color: transparent;
+}
+
+.header__banner::after {
+  left: auto;
+  right: -190px;
+  border-left: 10px solid #c65a58;
+  border-right: 15px solid transparent;
+}
+
+.header__banner__left,
+.header__banner__right {
+  position: absolute;
+  top: 10px;
+  left: -160px;
+  font-size: 25px;
+  height: 40px;
+}
+.header__banner__right {
+  left: auto;
+  right: -160px;
+}
+
+.header__banner__left::after,
+.header__banner__right::after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  right: -48px;
+  bottom: 5px;
+  height: 0;
+  width: 0;
+  border-top: 10px solid #a54846;
+  border-left: 37.5px solid transparent;
+}
+.header__banner__right::after {
+  left: -45px;
+  bottom: 5px;
+  border-top: 10px solid #a54846;
+  border-right: 37.5px solid transparent;
+  border-left: none;
+}
+
+.header__title {
+  font-family: "UnifrakturCook";
+  font-size: 144px;
+  font-weight: 200;
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.header-title {
+  font-family: "UnifrakturCook";
+  font-size: 144px;
+  font-weight: 200;
+  margin: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.newspaper__subheader {
+  margin-bottom: 20px;
+}
+
+.newspaper__subheader__content {
+  font-size: 14px;
+  padding: 2px 0px;
+  color: #555;
+  display: flex;
+  justify-content: space-between;
+}
+
+.newspaper__subheader__content span {
+  flex: 1;
+}
+.newspaper__subheader__content span:nth-child(2) {
+  text-align: center;
+}
+.newspaper__subheader__content span:nth-child(3) {
+  text-align: right;
+}
+
+.newspaper__title {
+  text-transform: uppercase;
+  text-align: justify;
+  font-weight: 900;
+  font-family: Impact, "Oswald", sans-serif;
+  font-size: 65px;
+  letter-spacing: 1px;
+  line-height: 0.85;
+  color: #333;
+  margin: 0;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+.newspaper__header--1 {
+  font-weight: 700;
+  font-size: 38px;
+  margin: 4px 0px 8px 0px;
+  font-family: Impact, "Oswald", sans-serif;
+  line-height: 38px;
+  margin-top: 10px;
+  color: #a54846;
+}
+
+.newspaper__author {
+  font-weight: 800;
+  font-family: Impact, "Oswald", sans-serif;
+  font-size: 11px;
+}
+
+.newspaper__author__title {
+  font-style: italic;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.newspaper__bottom__subtitle {
+  font-size: 14px;
+  color: #666;
+}
+
+.newspaper__bottom__title {
+  font-size: 18px;
+  color: #333;
+  margin-top: 5px;
+}
+
+.newspaper__bottom__title--2 {
+  margin-top: 20px;
+}
+
+.newspaper__bottom__text {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.newspaper__bottom__weather {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.weather__text {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 12px;
+  font-family: sans-serif;
+}
+
+.cloud {
+  width: 20px;
+  height: 12.45px;
+  background: #4883a4;
+  border-radius: 200px;
+  position: relative;
+  z-index: 0;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.cloud:after {
+  content: "";
+  background: #4883a4;
+  position: absolute;
+  border-radius: 100px;
+  transform: rotate(30deg);
+  width: 11.88px;
+  height: 11.88px;
+  top: -5px;
+  left: 4px;
+  right: auto;
+}
+
+.copyright {
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.newspaper__footer-image {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.newspaper__content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.newspaper__image {
+  margin-right: 50px;
+  border-radius: 7px;
+  margin-top: 20px;
+  filter: grayscale(100%);
+  transition: filter 0.2s ease;
+}
+
+.newspaper__image:hover {
+  filter: grayscale(0%);
+}
+
+.newspaper__right {
+  flex: 1;
+}
+
+.newspaper__profile-images {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+}
+
+.newspaper__profile-images .profile-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.profile-container img {
+  border-radius: 50%;
+}
+
+.newspaper__profile-images .profile-container .middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.newspaper__profile-images .profile-container:hover img {
+  opacity: 0.5;
+}
+
+.newspaper__profile-images .profile-container:hover .middle {
+  opacity: 1;
+}
+
+.newspaper__content-text {
+  color: #555;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .newspaper {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__banner {
+    max-width: none;
+    margin: 0 auto 20px;
+  }
+
+  .header__banner__title {
+    font-size: 12px;
+  }
+
+  .header__title {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+
+  .newspaper__subheader {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newspaper__subheader__content {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .newspaper__subheader__content span {
+    flex: none;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .newspaper__subheader__content span:nth-child(2) {
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  .newspaper__subheader__content span:nth-child(3) {
+    text-align: right;
+  }
+
+  .newspaper__header--1 {
+    font-size: 2rem;
+    margin-left: 60px;
+  }
+
+  .newspaper__author {
+    font-size: 1.2rem;
+    margin-left: 60px;
+    margin-bottom: 10px;
+  }
+
+  .newspaper__profile-images {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 40px;
+    margin-top: 40px;
+  }
+
+  .profile-container {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .newspaper__content {
+    flex-direction: column;
+  }
+
+  .newspaper__image {
+    margin-right: 0;
+    margin-left: 27px;
+    margin-bottom: 1rem;
+  }
+
+  .newspaper__right {
+    width: 100%;
+  }
+
+  .newspaper__bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vertical-divider {
+    display: none;
+  }
+
+  .newspaper__footer-image {
+    margin-bottom: 1rem;
+  }
+
+  .newspaper__bottom__weather {
+    flex-wrap: wrap;
+  }
+
+  .cloud {
+    width: 15px;
+    height: 9.67px;
+  }
+
+  .weather__text {
+    font-size: 10px;
+  }
+}

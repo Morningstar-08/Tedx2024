@@ -3,12 +3,18 @@ import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { FaInstagram, FaYoutube, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import "./Navbar.css";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [showMediaIcons, setShowMediaIcons] = useState(false);
   return (
     <div className="nav abril-fatface-regular">
       <img className="title--logo" src={tedxlogo} />
-      <ul className="nav--pages">
+      <ul
+        className={
+          showMediaIcons ? "nav--pages mobile-menu-link" : "nav--pages"
+        }
+      >
         <CustomLink to="/Home">HOME</CustomLink>
         <CustomLink to="/Speakers">SPEAKERS</CustomLink>
         <CustomLink to="/Sponsors">SPONSORS</CustomLink>
@@ -46,11 +52,11 @@ export default function Navbar() {
           </li>
         </ul>
 
-        {/* <div className="hamburger-menu">
-                    <a href="#">
-                        <GiHamburgerMenu />
-                    </a>
-                </div> */}
+        <div className="hamburger-menu">
+          <a href="#" onClick={() => setShowMediaIcons(!setShowMediaIcons)}>
+            <GiHamburgerMenu />
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -1,12 +1,12 @@
 .speakers {
-  background-color: aliceblue;
+  background-color: rgba(255, 255, 255, 0.5);
   width: 100%;
-  height: 100vh;
   max-width: 100em;
   margin-left: auto;
   margin-right: auto;
-  padding: 4.81em;
+  padding: 3em;
   display: flex;
+  align-items: center;
 }
 
 .speaker--grid {
@@ -30,6 +30,7 @@
   padding-left: 0.75em;
   padding-right: 0.75em;
   display: block;
+  cursor: pointer;
 }
 
 .speaker--item {
@@ -80,4 +81,202 @@
   font-family: owners-narrow, sans-serif;
   font-size: 1.75em;
   line-height: 1.25;
+}
+
+.speaker-overlay-wrapper {
+  z-index: 99999;
+  /* z-index: 2; */
+  width: 100%;
+  height: 100vh;
+  display: none;
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.speaker-overlay {
+  z-index: 2;
+  width: 30%;
+  height: 100%;
+  background-color: #000;
+  flex-direction: column;
+  padding-bottom: 4em;
+  display: flex;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: auto;
+  right: 0%;
+  overflow: auto;
+}
+
+.speaker-name {
+  color: white;
+  font-size: 2em;
+}
+
+.speaker-overlay-img {
+  z-index: 2;
+  width: 100%;
+  height: 40em;
+  background-image: url(https://d3e54v103j8qbb.cloudfront.net/img/background-image.svg);
+  background-position: 50%;
+  background-size: cover;
+  flex: none;
+  position: relative;
+}
+
+.overlay-speaker-image {
+  z-index: 2;
+  width: 100%;
+  height: 40em;
+  /* background-image: url(https://d3e54v103j8qbb.cloudfront.net/img/background-image.svg); */
+  background-position: 50%;
+  background-size: cover;
+  flex: none;
+  position: relative;
+}
+
+.speaker-image-main {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: 50% 0%;
+  position: relative;
+}
+
+.blur-bg {
+  z-index: 1;
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  background-color: rgba(0, 0, 0, 0.5);
+  display: block;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.black-fade-gradient {
+  z-index: 2;
+  height: 9em;
+  background-image: linear-gradient(transparent, #000);
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-bottom: 1em;
+  padding-left: 4em;
+  padding-right: 4em;
+  display: flex;
+  position: absolute;
+  top: auto;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.text-overlay-wrapper {
+  z-index: 1;
+  width: 100%;
+  flex: none;
+  padding-left: 4em;
+  padding-right: 4em;
+  position: relative;
+}
+
+.white-line {
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
+
+.speaker-about {
+  color: #fff;
+  font-size: 1.5em;
+  margin-top: 1.6em;
+}
+
+@media screen and (max-width: 991px) {
+  .speaker--image.spk {
+    margin-top: 10px;
+    padding-top: 30px;
+  }
+
+  .speaker--image.spk {
+    z-index: 1;
+    height: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    mix-blend-mode: normal;
+    object-fit: cover;
+    object-position: 50% 10%;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .speaker--image {
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+  }
+
+  .speaker--grid {
+    grid-column-gap: 0px;
+    grid-row-gap: 20px;
+    flex-flow: wrap;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-auto-columns: 1fr;
+    display: grid;
+  }
+
+  .speaker--grid {
+    width: 100%;
+    grid-column-gap: 0px;
+    grid-row-gap: 20px;
+    mix-blend-mode: normal;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-auto-columns: 1fr;
+    padding-bottom: 0;
+    display: grid;
+  }
+}
+@media screen and (max-width: 479px) {
+  .speaker--item {
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .speaper--grid {
+    width: 100%;
+    grid-column-gap: 0px;
+    grid-row-gap: 20px;
+    mix-blend-mode: normal;
+    grid-template-rows: auto auto auto;
+    grid-auto-columns: 1fr;
+    padding-bottom: 0;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 767px) {
+  .speaker--item {
+    width: 100%;
+    flex-direction: row;
+    margin: 0 auto 24px;
+    display: block;
+  }
 }

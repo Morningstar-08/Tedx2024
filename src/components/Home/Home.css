@@ -1,27 +1,38 @@
 .home--div {
-  position: fixed;
+  scroll-behavior: smooth;
   top: 100px;
   left: 0;
   width: 100%;
-  height: 100%;
-  overflow-x: hidden;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgb(0, 0, 0);
+  flex-direction: column;
+  padding-bottom: 5%;
 }
 
-.canvas--div {
-  position: fixed;
-  top: 100px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
+@font-face {
+  font-family: myFirstFont;
+  src: url(./SAMAN.ttf);
+}
+
+.title {
+  z-index: 10;
+  font-family: myFirstFont;
+  font-size: 8em;
+  color: white;
+  margin: 0;
+}
+
+.title-div {
+  z-index: 10;
+  margin-bottom: 50px;
 }
 
 .logo {
-  margin-bottom: auto;
+  z-index: 1;
+  /* margin-bottom: auto; */
   max-width: 40%;
   animation: spin 15s linear infinite;
   -webkit-animation: spin 15s linear infiite;
@@ -53,4 +64,16 @@
   .logo {
     max-width: 80%;
   }
+}
+
+.timeline {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+}
+
+.timeline img {
+  width: 100%;
 }
