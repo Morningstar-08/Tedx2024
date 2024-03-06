@@ -126,6 +126,11 @@
 
 .sponsor-content {
   transform: scale(0);
+  font-size: 0.66em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
 }
 
 .sponsor-title {

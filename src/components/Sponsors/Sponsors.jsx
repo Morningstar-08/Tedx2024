@@ -49,9 +49,11 @@ export default function Sponsors() {
       />
       <SponsorCard
         sponsor_title="Insight Partner"
-        sponsor_name="Indian Oil Corporation"
-        sponsor_content=""
-        sponsor_img="url(./sponsors/IOCL.png)"
+        sponsor_name="Servo Lubricants and Greases"
+        sponsor_content="Servo: Servo, a subsidiary of Indian Oil Corporation, epitomizes excellence and sustainability in India's energy sector. With a customer-centric approach, they deliver top-notch solutions across the hydrocarbon value chain, fueling India's progress and development. Guided by integrity and innovation, they are dedicated to shaping a sustainable future while meeting the evolving energy needs of the nation.
+        As the world grapples with environmental challenges, sustainability takes center stage in Servo's operations. With a deep sense of responsibility towards the environment and society, Servo invests in cutting-edge technologies and practices that minimize its ecological footprint. 
+        In essence, Servo isn't just a subsidiary of Indian Oil Corporation; it's a symbol of India's resilience, ingenuity, and progress."
+        sponsor_img="url(./sponsors/servo.jpg)"
       />
       <SponsorCard
         sponsor_title="Travel Partner"
