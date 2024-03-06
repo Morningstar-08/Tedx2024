@@ -50,7 +50,8 @@ export default function Aboutus() {
             profile="./core/agni.jpg"
             name="Agnishwar Raychaudhuri"
             position="Ediotrial Speaker's Experience Core"
-            description=""
+            description="With a heart full of warmth and a razor-sharp wit, he infuses every project with a unique energy. From crafting compelling narratives to articulating complex concepts with clarity, his editorial ability is not just a skill but a form of art. A true maestro of the written word, he leaves an indelible mark with every stroke of the pen. 
+            Beyond crafting words he has meticulous attention to detail and an innate talent for organization, he has a unique knack for understanding the pulse of an event, ensuring that each moment unfolds effortlessly. "
           />
           <Card
             profile="./core/khushi.JPG"
