@@ -24,7 +24,7 @@ const YearCardRight = (props) => {
           height="250px"
         />
         <div className="newspaper__content-text">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p></p>
         </div>
       </div>
       <div className="newspaper__right">
@@ -154,7 +154,7 @@ const YearCardLeft = (props) => {
           height="250px"
         />
         <div class="newspaper__content-text">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p></p>
         </div>
       </div>
     </div>
